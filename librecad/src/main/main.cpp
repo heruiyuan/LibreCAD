@@ -53,7 +53,7 @@
  */
 int main(int argc, char** argv)
 {
-    QT_REQUIRE_VERSION(argc, argv, "5.2.1");
+    QT_REQUIRE_VERSION(argc, argv, "5.14.2");
 
     /* Check first two arguments in order to decide if we want to run librecad
      * as console dxf2pdf tool. On Linux we can create a link to librecad
@@ -74,7 +74,7 @@ int main(int argc, char** argv)
 
     RS_DEBUG->setLevel(RS_Debug::D_WARNING);
 
-    LC_Application app(argc, argv);
+    LC_Application app(argc, argv);                                 //LC_Application inherit QApplication directly and submit some args in it
     QCoreApplication::setOrganizationName("LibreCAD");
     QCoreApplication::setApplicationName("LibreCAD");
     QCoreApplication::setApplicationVersion(XSTR(LC_VERSION));

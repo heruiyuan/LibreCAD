@@ -133,6 +133,7 @@ unix {
 }
 
 win32 {
+    message("$${BOOST_DIR}")
     exists( "$$(BOOST_DIR)" ) {			# Is it set in the environment?
         BOOST_DIR = "$$(BOOST_DIR)"		# Yes, use
     } else:isEmpty( BOOST_DIR ) {		# Is it set in custom.pro?
